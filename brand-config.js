@@ -8,19 +8,19 @@
 
 export const brand = {
   // Shown in the header, browser tab, and "Add to Home Screen" prompt.
-  appName: "Abode Digital Technology",
-  appNameAccent: "Technology",   // the part of appName styled in the accent color, e.g. "Abode Digital" + "Technology"
+  appName: "Aradhika Beauty Parlour",
+  appNameAccent: "Parlour",   // the part of appName styled in the accent color, e.g. "Abode Digital" + "Technology"
 
   // Path/URL to the parlour's logo — square image works best. Leave blank
   // to fall back to a plain initial badge.
-  logoUrl: "logo.png",
+  logoUrl: " ",
 
   tagline: "Look Your Best, On Your Terms",
   subTagline: "Book a service at the salon, or have us come to you.",
 
   // Contact shown in the footer — replace with the parlour's own.
-  contactPhone: "9860046593",
-  contactAddress: "",
+  contactPhone: "9370267576",
+  contactAddress: "Address-Jay Vijay Nagari, Phase-1, Shop No-11, Near Sparkle Kids International School, Nallasopara-West Mobile - 9370267576 ",
 
   // ============================================================
   // APP PIN — required every time the app is opened, since this
