@@ -13,7 +13,7 @@ export const brand = {
 
   // Path/URL to the parlour's logo — square image works best. Leave blank
   // to fall back to a plain initial badge.
-  logoUrl: " ",
+  logoUrl: "logo.png",
 
   tagline: "Look Your Best, On Your Terms",
   subTagline: "Book a service at the salon, or have us come to you.",
