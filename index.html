@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#2E1520">
+<title>GlamBook</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand-block" data-route="home" title="Home">
+    <img id="brandLogo" class="brand-logo" alt="" />
+    <div class="brand-text">
+      <div class="brand-name" id="brandName"></div>
+      <div class="brand-phone" id="brandPhone"></div>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button class="icon-btn" data-route="home" title="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg>
+    </button>
+    <button class="icon-btn" data-route="panel" title="Panel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+    </button>
+    <button class="icon-btn" id="lockBtn" title="Lock">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="app-footer">App Designed &amp; Developed By - Abode Digital Technology - Mobile - 9860046593</footer>
+
+<div id="billBar" class="bill-bar" style="display:none">
+  <span id="billBarText"></span>
+  <button class="bill-bar-btn" data-route="panel/bill">Review &amp; Bill</button>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!-- ===== Templates ===== -->
+
+<template id="tpl-pin">
+  <section class="login-view pin-view">
+    <div class="pin-top-block">
+      <img id="pinTopIcon" class="pin-top-icon" src="icon-512.png" alt="">
+      <div class="pin-top-name">My Parlour</div>
+    </div>
+
+    <h2>Enter PIN</h2>
+    <p class="muted">This app is locked to protect client data.</p>
+    <div class="field-group">
+      <input type="password" id="pinInput" inputmode="numeric" placeholder="••••" autofocus>
+    </div>
+    <button class="primary-btn" id="pinConfirmBtn">Unlock</button>
+    <p class="error" id="pinError"></p>
+
+    <div class="pin-brand-block">
+      <img src="brand-collage.jpg" alt="Abode Digital Technology" class="pin-brand-collage">
+      <p class="pin-brand-credit">App Designed &amp; Developed By - Abode Digital Technology - Mobile - 9860046593</p>
+      <p class="pin-brand-copyright" id="pinBrandCopyright"></p>
+    </div>
+  </section>
+</template>
+
+<template id="tpl-home">
+  <div class="backup-reminder" id="backupReminder" style="display:none">
+    <span id="lastBackupText"></span>
+    <span class="backup-reminder-actions">
+      <button class="backup-reminder-btn" data-route="panel/backup">Back up now</button>
+      <button class="backup-reminder-dismiss" id="dismissReminderBtn" title="Dismiss">&times;</button>
+    </span>
+  </div>
+  <section class="hero">
+    <h1 id="heroTagline"></h1>
+    <p class="hero-sub" id="heroSubTagline"></p>
+  </section>
+
+  <section class="category-grid" id="categoryGrid"></section>
+</template>
+
+<template id="tpl-category">
+  <section class="menu-view">
+    <button class="back-btn" data-route="home">&larr; All services</button>
+    <img id="categoryBanner" class="category-banner" style="display:none" alt="">
+    <div class="category-header">
+      <span class="category-icon-lg" id="categoryIconLg"></span>
+      <h2 id="categoryName"></h2>
+    </div>
+    <div id="menuGroups"></div>
+  </section>
+</template>
+
+<!-- ===== Panel ===== -->
+
+<template id="tpl-panel">
+  <section class="admin-view">
+    <div id="panelContent"></div>
+  </section>
+</template>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
