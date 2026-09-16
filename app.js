@@ -1,7 +1,6 @@
 import { brand } from "./brand-config.js";
 import { categories, academyImage } from "./categories-config.js";
-import { brand } from "./brand-config.js";
-import { categories, academyImage } from "...";
+
 
 // ===== Splash screen =====
 document.addEventListener('DOMContentLoaded', function () {
@@ -18,11 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ===== Register service worker =====
 if ("serviceWorker" in navigator) {
-  ...
-// ===== Register service worker =====
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
-}
 
 // ===== State =====
 const state = {
