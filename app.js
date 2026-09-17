@@ -62,8 +62,7 @@ function renderPinLock() {
       `Trial period ended. Contact ${brand.appName} to continue using this app — ${brand.contactPhone}`;
   }
 
-  document.getElementById("pinBrandCopyright").textContent =
-    `© ${new Date().getFullYear()} ${brand.appName} - All rights reserved.`;
+  document.getElementById('pinBrandCopyright').textContent = '© ' + new Date().getFullYear() + ' Abode Digital Technology - All rights reserved.';
 
   const input = document.getElementById("pinInput");
   const tryUnlock = () => {
